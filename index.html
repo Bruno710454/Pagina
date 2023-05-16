@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .tudo {
+        height: 100vh;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+        display: flex;
+        padding: 20px;
+        justify-content: space-around;
+        box-shadow: 5px 5px 5px 5px #ccc;
+        width: auto;
+    }
+
+    main {
+        width: 500px;
+
+    }
+
+    .centro {
+        display: flex;
+        justify-content: center;
+    }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        padding: 10px;
+        background-color: white;
+        width: 300px;
+        position: relative;
+        border-radius: 8px;
+        height: 300px;
+    }
+
+    .se {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position:absolute;
+        width: 100vw;
+        margin-top:-100vh;
+        background-color: rgba(0, 0, 0,0.8);
+        height: 100vh;
+
+    }
+
+    .close {
+        background-color: white;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .btn {
+        padding: 10px;
+        width: 100px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .btn-logar {
+        background-color: rgb(20, 147, 220);
+        color: white;
+    }
+
+    .btn-cadas {
+        color: #8b8b8b;
+        box-shadow: 5px 5px 5px 5px #ccc;
+    }
+
+    .btn-conf {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+</style>
+<body onload="inicio()" id="body">
+    <div class="tudo">
+        <header>
+            <div>
+                <a href="">sobre</a>
+            </div>
+            <div>
+                <a href="">contato</a>
+            </div>
+            <div>
+                <a href="">inicio</a>
+            </div>
+            <div>
+                <button onclick="abrir()">entrar</button>
+            </div>
+        </header>
+        <div class="centro">
+            <main>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, consequatur quos incidunt provident tenetur, obcaecati impedit et ipsum architecto voluptatem nisi ea! Magni, quisquam. Vero tempore eaque voluptatum dignissimos quibusdam! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo sit iure explicabo adipisci qui laboriosam, pariatur magni distinctio aperiam. Maiores a illo eum ducimus labore quo similique porro nihil autem! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti quas ullam ab praesentium libero iste facilis tenetur minima similique incidunt recusandae quisquam repellendus quae voluptatibus veniam, enim magnam nisi sequi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, repellendus quisquam non nam, doloremque ex beatae asperiores odio, nobis alias quo. Repudiandae ab, amet nam dolor rem facilis error nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam illo dolor necessitatibus sunt amet corrupti explicabo adipisci obcaecati. Minus ipsa, aut delectus eum autem quam maiores veniam quisquam debitis quod?Lorem ipsum dolor sit amet </p>
+            </main>
+        </div>
+    </div>
+    <section id="section" class="se">
+        <div class="login">
+            <div class="close" onclick="fechar()">
+                <img src="icons8-x-24.png" alt="">
+            </div>
+            <div>
+                <input type="text" placeholder="email">
+            </div>
+            <div>
+                <input type="text" placeholder="senha">
+            </div>
+            <div>
+                <small>Não possue cadastro?</small>
+                <small style="color: rgb(20, 147, 220);">cadastre-se já!</small>
+            </div>
+            <div class="btn-conf">
+                <a href="" class="btn-logar btn">logar</a>
+                <a href="http://localhost/cursophp/ex.000/index.php" target="_blank" class="btn-cadas btn">cadastrar</a>
+            </div>
+        </div>
+    </section>
+    <script>
+        function abrir(){
+            let close = document.getElementById('section')
+            let body = document.getElementById('body')
+            close.style.display="block"
+            close.style.display="flex"
+            close.style.justifyContent="center"
+            close.style.alignItems="center"
+            body.style.overflow="hidden"
+
+
+        }
+
+        function fechar(){
+            let close = document.getElementById('section')
+            let body = document.getElementById('body')
+            body.style.overflow="auto"
+            close.style.display="none"
+
+        }
+
+        function inicio(){
+            let close = document.getElementById('section')
+            close.style.display="none"
+            
+        }
+    </script>
+</body>
+</html>
