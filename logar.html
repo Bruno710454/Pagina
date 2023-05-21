@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="logar.css">
+</head>
+<style>
+ 
+</style>
+<body onload="inicio()" id="bod">
+    <div class="tudo" id="all">
+        <header>
+            <ul>
+                <li>
+                    <img src="icons8-usuário-30.png" alt="" class="img" id="img1" onmouseenter="exp()" onmouseleave="exit()">
+                </li>
+                <ul class="menu" id="menu2" onmouseenter="exp()" onmouseleave="exit()">
+                    <li><button onclick="abrir()" class="btn2">entrar</button></li>
+                    <li><a href="http://localhost/cursophp/ex.000/index.php" class="link" target="_blank">cadastrar</a></li>
+                </ul>
+            </ul>
+        </header>
+        <div class="header-2">
+            <div>
+                <nav class="title-1">
+                    <h1>CONTEÚDOS COM REFERENCIA</h1>
+                </nav>
+                <nav class="title-2">
+                    <h3>clique abaixo para acessar as referencias bibliograficas</h3>
+                </nav>
+                <a href="" class="btn-acessar">acessar</a>
+                <button onclick="tes()">teste</button>
+            </div>
+        </div>
+        <main>
+            <div>
+                <div class="ti">
+                    <h1 style="font-weight: lighter;">Como ter</h1>
+                    <h1>sonhos lucidos</h1>
+                </div>
+            <hr>
+            </div>
+            <div class="div-main">
+                <p>
+                    Mantenha um diário de sonhos. Mantenha-o perto de sua cama durante a noite. Ao acordar, anote imediatamente o que sonhou ou as emoções e sensações que experimentou ao acordar. Isso vai treiná-lo para que se lembre mais deles, o que é importante para ter um sonho lúcido. [1] Além disso, não há motivos para controlar seus sonhos se você esquecer a experiência que teve depois de acordar.
+                    Se preferir, mantenha um dispositivo de gravação perto da sua cama.
+                    Você deve se lembrar mais de seu sonho caso fique parado por alguns minutos e se concentrando na memória antes de começar a escrever.
+                </p>
+            </div>
+            <div class="img-sonho">
+                <img src="sonho-500.jpg" alt="">
+            </div>
+        </main>
+        <section class="sect">
+            <div style="margin-top: 20px; font-size: 20px; " class="div-canal">
+                <h1 class="titulo-2">Canais no youtube</h1>
+            </div>
+            <div class="div-canal">
+                <h3>Abaixo estarei mostrando alguns dos melhores canais que falam sobre sonhos lucidos</h3>
+            </div>
+            <div class="canais">
+                <div class="canal">ele</div>
+                <div class="canal">ele</div>
+                <div class="canal">mais esse</div>
+            </div>
+        </section>
+        <footer>
+            <h1 >ola</h1>
+        </footer>
+    </div>
+    <article class="menu-side1" id="menu1"> 
+        <div class="menu-side2" id="menu3">
+            <button onclick="close2()">fechar</button>
+        </div>
+    </article>
+    <section id="section" class="se">
+        <form action="testeLogin.php" class="login" method="POST">
+            <div class="close" onclick="fechar()">
+                <img src="icons8-x-24.png" alt="">
+            </div>
+            <div>
+                <input type="text" placeholder="email" name="email" class="input">
+            </div>
+            <div>
+                <input type="text" placeholder="senha" name="senha" class="input">
+            </div>
+            <div>
+                <small>Não possue cadastro?</small>
+                <small style="color: rgb(20, 147, 220);">cadastre-se já!</small>
+            </div>
+            <div class="btn-conf">
+                <button class="btn-logar btn" name="submit" type="submit">Logar</button>
+                <a href="http://localhost/cursophp/ex.000/index.php" target="_blank" class="btn-cadas btn">cadastro</a >   
+            </div>
+        </form>
+    </section>
+    <script>
+
+        function abrir(){
+            let close = document.getElementById('section')
+            let body = document.getElementById('bod')
+            let tudo = document.getElementById('all')
+            tudo.style.overflow="hidden"
+            close.style.display="block"
+            close.style.display="flex"
+            close.style.justifyContent="center"
+            close.style.alignItems="center"
+            body.style.width="auto"
+            body.style.overflow="hidden"
+
+
+        }
+
+        function fechar(){
+            let tudo = document.getElementById('all')
+            let close = document.getElementById('section')
+            let body = document.getElementById('bod')
+            tudo.style.overflow="auto"
+            body.style.overflow="auto"
+            close.style.display="none"
+
+        }
+
+        function inicio(){
+            let close = document.getElementById('section')
+            close.style.display="none"
+            
+        }
+
+        function exp() {
+            let menu = document.getElementById('menu2')
+            menu.style.display="block"
+            menu.style.display="flex"
+            menu.style.gap="10px"
+        }
+
+        function exit(){
+            let menu = document.getElementById('menu2')
+            menu.style.transition="3s"
+            menu.style.display="none"
+
+        }
+
+        function tes(){
+            let menu1 = document.getElementById('menu1')
+            let menu3 =document.getElementById('menu3')
+            let body2 = document.getElementById('bod')
+            let tudo = document.getElementById('all')
+            body2.style.overflow="hidden"
+            menu3.style.transition="0.4s"
+            menu3.style.width="350px"
+            menu1.style.width="100%"
+        }
+
+        function close2(){
+            let body3 = document.getElementById('bod')
+            let menuside2 = document.getElementById('menu3')
+            let menuside3 = document.getElementById('menu1')
+            menuside2.style.width="0px"
+            menuside3.style.width="0px"
+            body3.style.overflow="auto"
+
+        }
+    </script>
+</body>
+</html>
