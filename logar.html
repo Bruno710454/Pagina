@@ -29,10 +29,9 @@
                     <h1>CONTEÚDOS COM REFERENCIA</h1>
                 </nav>
                 <nav class="title-2">
-                    <h3>clique abaixo para acessar as referencias bibliograficas</h3>
+                    <p>clique abaixo para acessar as referencias bibliograficas</p>
                 </nav>
-                <a href="" class="btn-acessar">acessar</a>
-                <button onclick="tes()">teste</button>
+                <button class="btn-acessar" onclick="tes()">acessar</button>
             </div>
         </div>
         <main>
@@ -56,15 +55,18 @@
         </main>
         <section class="sect">
             <div style="margin-top: 20px; font-size: 20px; " class="div-canal">
-                <h1 class="titulo-2">Canais no youtube</h1>
+                <h1 class="titulo-2" style="color:rgb(10, 128, 196) ;">CANAIS NO YOUTUBE</h1>
             </div>
             <div class="div-canal">
                 <h3>Abaixo estarei mostrando alguns dos melhores canais que falam sobre sonhos lucidos</h3>
             </div>
             <div class="canais">
-                <div class="canal">ele</div>
-                <div class="canal">ele</div>
-                <div class="canal">mais esse</div>
+                <div class="canal">
+                    <img src="explore-403.jpg" alt="">
+                </div>
+                <div class="canal">
+                    <img src="daniellove-400.jpg" alt="">
+                </div>
             </div>
         </section>
         <footer>
@@ -73,7 +75,14 @@
     </div>
     <article class="menu-side1" id="menu1"> 
         <div class="menu-side2" id="menu3">
-            <button onclick="close2()">fechar</button>
+            <div class="menu-side3">
+                <div class="close-btn">
+                    <button onclick="close2()">fechar</button>
+                </div>
+                <div class="add-sonho">
+                    <fieldset><p>adicionar</p></fieldset>
+                </div>
+            </div>
         </div>
     </article>
     <section id="section" class="se">
@@ -151,7 +160,7 @@
             let tudo2 = document.getElementById('all')
             body2.style.overflow="hidden"
             menu3.style.transition="0.4s"
-            menu3.style.width="350px"
+            menu3.style.width="450px"
             menu1.style.width="100%"
             tudo2.style.overflow="hidden"
         }
